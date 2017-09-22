@@ -7,9 +7,9 @@ def get_api(cfg):
     return tweepy.API(auth)
 
 def main():
-    twit = "Welcome"
+    now_status = "Welcome"
     while 1:
-        print ("OK " + twit)    # show status here
+        print (now_status)    # show status here
         twit = raw_input('Giliran: ')   #input nombor giliran
         if twit == 'quit' : break   # exit console
         # Fill in the values noted in previous step here
@@ -24,6 +24,7 @@ def main():
         tweet = twit    #string to tweet number
         status = api.update_status(status=tweet)
         # yes, tweet is called 'status' rather confusing
+        now_status = ("OK" + twit)
 
         os.system('cls')    # clear screen for windows shell
 
