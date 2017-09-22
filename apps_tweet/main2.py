@@ -10,10 +10,10 @@ def main():
         twit = raw_input('Giliran: ')
         # Fill in the values noted in previous step here
         cfg = {
-            "consumer_key"          : "",
-            "consumer_secret"       : "",
-            "access_token"          : "",
-            "access_token_secret"   : "",
+            "consumer_key"          : "99iFuCOTzNQb5oMpNfT9IVZAN",
+            "consumer_secret"       : "Rm7e8jOE06q0jGny3pUDP36Xafxb3njjhZCarb8gDqxd1a5ihb",
+            "access_token"          : "906176499320897536-mlic1L6oJAY815owEY5wBdTZ9bOmPpm",
+            "access_token_secret"   : "TeqFHKEGSVOxqj5MmFfACVM2ZlfRqq65c7LTiEM873Q2H",
             }
 
         api = get_api(cfg)
