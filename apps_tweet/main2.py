@@ -6,18 +6,24 @@ def get_api(cfg):
     return tweepy.API(auth)
 
 def main():
-    # Fill in the values noted in previous step here
-    cfg = {
-        "consumer_key"          : "",
-        "consumer_secret"       : "",
-        "access_token"          : "",
-        "access_token_secret"   : "",
-    }
+    while 1:
+        twit = raw_input('Giliran: ')
+        # Fill in the values noted in previous step here
+        cfg = {
+            "consumer_key"          : "",
+            "consumer_secret"       : "",
+            "access_token"          : "",
+            "access_token_secret"   : "",
+            }
 
-    api = get_api(cfg)
-    tweet = "tweet from pyhton_1"
-    status = api.update_status(status=tweet)
-    # yes, tweet is called 'status' rather confusing
+        api = get_api(cfg)
+        tweet = twit
+        status = api.update_status(status=tweet)
+        # yes, tweet is called 'status' rather confusing
+        print ("OK " + twit)
+
+        if twit == 'quit' : break
+
 
 if __name__ == "__main__":
     main()
