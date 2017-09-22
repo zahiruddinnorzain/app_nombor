@@ -41,8 +41,9 @@ def main():
 
             now_status = ("OK " + twit)  # status for success post
 
-        except Exception:   # Fail to post
-            now_status = ("ERROR " + twit)
+        except Exception as e:   # Fail to post
+            now_status = e
+            #now_status = ("ERROR " + e + "at post " + twit)
 
         os.system('cls')    # clear screen for windows shell
 
