@@ -1,4 +1,5 @@
 import tweepy
+import os
 
 def get_api(cfg):
     auth = tweepy.OAuthHandler(cfg['consumer_key'], cfg['consumer_secret'])
@@ -6,8 +7,11 @@ def get_api(cfg):
     return tweepy.API(auth)
 
 def main():
+    twit = "Welcome"
     while 1:
-        twit = raw_input('Giliran: ')
+        print ("OK " + twit)    # show status here
+        twit = raw_input('Giliran: ')   #input nombor giliran
+        if twit == 'quit' : break   # exit console
         # Fill in the values noted in previous step here
         cfg = {
             "consumer_key"          : "99iFuCOTzNQb5oMpNfT9IVZAN",
@@ -17,12 +21,13 @@ def main():
             }
 
         api = get_api(cfg)
-        tweet = twit
+        tweet = twit    #string to tweet number
         status = api.update_status(status=tweet)
         # yes, tweet is called 'status' rather confusing
-        print ("OK " + twit)
 
-        if twit == 'quit' : break
+        os.system('cls')    # clear screen for windows shell
+
+
 
 
 if __name__ == "__main__":
