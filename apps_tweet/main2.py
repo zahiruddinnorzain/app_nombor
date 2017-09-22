@@ -9,7 +9,13 @@ def get_api(cfg):
 def main():
     now_status = "Welcome"
     while 1:
+
+        print ('================')
+        print ('Status:\n')
         print (now_status)    # show status here
+        print ('\n================')
+        print ('\n')
+
         twit = raw_input('Giliran: ')   #input nombor giliran
         if twit == 'quit' : break   # exit console
         # Fill in the values noted in previous step here
@@ -24,7 +30,7 @@ def main():
         tweet = twit    #string to tweet number
         status = api.update_status(status=tweet)
         # yes, tweet is called 'status' rather confusing
-        now_status = ("OK" + twit)
+        now_status = ("OK " + twit)  # status for success post
 
         os.system('cls')    # clear screen for windows shell
 
