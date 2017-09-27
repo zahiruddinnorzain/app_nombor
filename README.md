@@ -3,7 +3,7 @@
 projek angka giliran pada phone. nombor giliran akan dijadikan online.  
 
 ## developer  
-zahiruddin
+zahiruddin  
 ibrahim
 
 
