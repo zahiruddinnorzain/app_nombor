@@ -9,7 +9,7 @@ def get_api(cfg):
 
 def main():
     os.system('cls')
-    now_status = "Welcome\nType 'quit' to exit"
+    now_status = "Welcome [ver 1.0]\nType 'quit' to exit"
     while 1:
 
         print ('================')
